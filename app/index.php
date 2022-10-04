@@ -10,7 +10,7 @@
   if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
   }
-//prueba
+
 
 
 $query = mysqli_query($conn, "SELECT * FROM usuarios")
