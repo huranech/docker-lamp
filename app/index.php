@@ -7,8 +7,6 @@
   <title>Catálogo de plantas</title>
 </head>
 <body>
-
-  <div>Hola hola, soy maire figueroa</div>
   <?php
     echo '<h1>Yeah, it works!<h1>';
     // phpinfo();
