@@ -32,11 +32,11 @@
 <body>
   <nav id="navbar">
     <ul class="navlist">
-      <li><a href="#Catalogo de plantas">Catálogo de plantas</a></li>
-      <li><a href="#Modificar catálogo">Modificar catálogo</a></li>
-      <li><a href="#Iniciar sesiónc">Iniciar sesión</a></li>
-      <li><a href="#Registrarse">Registrarse</a></li>
-      <li><a href="#Perfil">Perfil</a></li>
+      <li><a href="catalogoplantas.php">Catálogo de plantas</a></li>
+      <li><a href="modificarcatalogo.php">Modificar catálogo</a></li>
+      <li><a href="iniciarsesion.php">Iniciar sesión</a></li>
+      <li><a href="registrarse.php">Registrarse</a></li>
+      <li><a href="perfil.php">Perfil</a></li>
     </ul>
   </nav>
   <?php
