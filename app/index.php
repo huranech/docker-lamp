@@ -7,6 +7,15 @@
   <title>Catálogo de plantas</title>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#Catalogo de plantas">Catálogo de plantas</a></li>
+      <li><a href="#Modificar catálogo">Modificar catálogo</a></li>
+      <li><a href="#Iniciar sesiónc">Iniciar sesión</a></li>
+      <li><a href="#Registrarse">Registrarse</a></li>
+      <li><a href="#Perfil">Perfil</a></li>
+    </ul>
+  </nav>
   <?php
     echo '<h1>Yeah, it works!<h1>';
     // phpinfo();
