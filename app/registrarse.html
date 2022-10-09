@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registrarse</title>
 </head>
 <body>
     <div>
-        <form>
+        <form action="procesar-registrarse.php" method="post">
             <h1>Regístrate</h1>
-            <label for="nombre y apellidos"><b>Nombre y apellidos:</b>
-            <input type="text" name="nombre y apellidos" required>
+            <input type="text" name="nombre y apellidos" placeholder="Nombre y Apellidos" required>
 
-            <label for="dni"> <b>DNI:</b>
-            <input type="text" name="dni" required>
+            <input type="text" name="dni" placeholder="DNI" required>
 
-            <label for="teléfono"> <b>Teléfono:</b>
-            <input type="text" name="teléfono" required>
+            <input type="tel" name="teléfono" placeholder="teléfono" required>
 
             <label for="fecha de nacimiento"> <b>Fecha de nacimiento:</b>
             <input type="text" name="fecha de nacimiento" required>

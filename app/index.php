@@ -35,7 +35,7 @@
       <li><a href="catalogoplantas.php">Catálogo de plantas</a></li>
       <li><a href="modificarcatalogo.php">Modificar catálogo</a></li>
       <li><a href="iniciarsesion.php">Iniciar sesión</a></li>
-      <li><a href="registrarse.php">Registrarse</a></li>
+      <li><a href="registrarse.html">Registrarse</a></li>
       <li><a href="perfil.php">Perfil</a></li>
     </ul>
   </nav>
