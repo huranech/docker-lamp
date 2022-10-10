@@ -1,25 +1,23 @@
 <?php
 
-//conectar con la base de datos
-$hostname = "db";
-$username = "admin";
-$password = "test";
-$db = "database";
+if(isset($_POST["submit"])) {
+  
+ $nombre = $_POST["nombre"];
+ $usuario = $_POST["usuario"];
+ $contrasena = $_POST["contrasena"];
+ $dni = $_POST["dni"];
+ $telefono = $_POST["telefono"];
+ $fechanato = $_POST["fechanato"];
+ $email = $_POST["email"];
 
-$conn = mysqli_connect($hostname,$username,$password,$db);
-if ($conn->connect_error) {
-  die("Database connection failed: " . $conn->connect_error);
-}
+ require_once 'index.php';
+ require_once 'funciones.php';
 
-$sql = "INSERT INTO usuarios (id, nombre, contraseña, DNI, telefono, fechaNacimiento, email) 
-        VALUES(?, ?, ?, ?, ?, ?, ?)"
+ //if(dniNoValido($usuario) !== false) {
+  //header("location: ../registrarse.html?error=invaliduid");
+  //exit()
+ //}
 
-$stmt = $db->prepare($sql);
-$resultado = $stmt->execute([$_POST['nombre'],$_POST['contraseña'],$_POST['dni'],$_POST['teléfono'],$_POST['fecha de nacimiento'],$_POST['email']]);
-if($resultado)
-{
-    echo 'se ha registrado correctamente';
-}
-else{
-    echo 'no se ha podido guardar';
+ crearUsuario($conn, $nombre, $usuario, $contrasena, $dni, $telefono, $fechanato, $email);
+
 }
