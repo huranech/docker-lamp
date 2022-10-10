@@ -11,13 +11,9 @@ if(isset($_POST["submit"])) {
  $email = $_POST["email"];
 
  require_once 'index.php';
- require_once 'funciones.php';
 
- //if(dniNoValido($usuario) !== false) {
-  //header("location: ../registrarse.html?error=invaliduid");
-  //exit()
- //}
-
- crearUsuario($conn, $nombre, $usuario, $contrasena, $dni, $telefono, $fechanato, $email);
+ $id = 1;
+ $sql = "INSERT INTO usuarios(id, nombre, usuario, contrasena, DNI, telefono, fechanato, email) VALUES ('$id', '$nombre', '$usuario', '$contrasena', '$dni', '$telefono', '$fechanato', '$email');";
+ mysqli_query($conn, $sql);
 
 }
