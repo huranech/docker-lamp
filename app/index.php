@@ -34,13 +34,15 @@
     <ul class="navlist">
       <li><a href="catalogoplantas.php">Catálogo de plantas</a></li>
       <li><a href="modificarcatalogo.php">Modificar catálogo</a></li>
-      <li><a href="iniciarsesion.php">Iniciar sesión</a></li>
+      <li><a href="login.html">Iniciar sesión</a></li>
       <li><a href="registrarse.html">Registrarse</a></li>
       <li><a href="perfil.php">Perfil</a></li>
     </ul>
   </nav>
   <?php
-    echo '<h1>Yeah, it works!<h1>';
+
+    
+    
     // phpinfo();
     $hostname = "db";
     $username = "admin";
@@ -52,20 +54,14 @@
       die("Database connection failed: " . $conn->connect_error);
     }
 
+    include("funciones.php");
+    include("procesar-login.php");
+    $user_data = check_login($conn);
+
+    echo($_SESSION['id_usuario']);
+    echo($user_data['usuario']);
 
 
-  $query = mysqli_query($conn, "SELECT * FROM usuarios")
-    or die (mysqli_error($conn));
-
-  while ($row = mysqli_fetch_array($query)) {
-    echo
-    "<tr>
-      <td>{$row['id']}</td>
-      <td>{$row['nombre']}</td>
-    </tr>";
-    
-
-  }
 
   ?>
 </body>

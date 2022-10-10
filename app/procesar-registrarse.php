@@ -11,8 +11,9 @@ if(isset($_POST["submit"])) {
  $email = $_POST["email"];
 
  require_once 'index.php';
+ require_once 'funciones.php';
 
- $id = 1;
+ $id = random_num(20);
  $sql = "INSERT INTO usuarios(id, nombre, usuario, contrasena, DNI, telefono, fechanato, email) VALUES ('$id', '$nombre', '$usuario', '$contrasena', '$dni', '$telefono', '$fechanato', '$email');";
  mysqli_query($conn, $sql);
 
