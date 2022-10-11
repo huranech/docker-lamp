@@ -14,7 +14,7 @@ if(isset($_POST["submit"])) {
  require_once 'funciones.php';
 
  $id = random_num(20);
- $sql = "ALTER TABLE usuarios WHERE usuario = '$usuario SET usuarios(id, nombre, usuario, contrasena, DNI, telefono, fechanato, email) VALUES ('$id', '$nombre', '$usuario', '$contrasena', '$dni', '$telefono', '$fechanato', '$email');";
+ $sql = "UPDATE TABLE usuarios SET id = '$id', nombre = '$nombre', usuario = '$usuario', contrasena = '$contrasena', DNI = '$dni', telefono = '$telefono', fechanato = '$fechanato', email = '$email' WHERE dni = '$dni';";
  mysqli_query($conn, $sql);
 
 }
