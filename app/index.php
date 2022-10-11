@@ -59,7 +59,6 @@
     $user_data = check_login($conn);
 
     echo($_SESSION['id_usuario']);
-    echo($user_data['usuario']);
 
 
 
