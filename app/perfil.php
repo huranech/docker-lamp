@@ -11,25 +11,45 @@
         <div>
         <h1>Modifica los datos que quieras de tu perfil</h1>
             <form>
-                <label for="nombre"> <b>Nombre y apellidos actuales:</b>
-                <?php 
-                $hostname = "db";
-                $username = "admin";
-                $password = "test";
-                $db = "database";
-            
-                $conn = mysqli_connect($hostname,$username,$password,$db);
-                if ($conn->connect_error) {
-                  die("Database connection failed: " . $conn->connect_error);
-                }
-                
-                require_once("procesar-login.php");
-                require_once("funciones.php");
-                check_login($conn);
-                echo($_SESSION['id_usuario']);
-                ?>
+                <label for="nombre"> <b>Cambiar nombre y apellido:</b>
                 <input type="text" name="nombre">
-                <input type="submit" name="c_nombre" value="Cambiar Nombre y apellidos">
+                <input type="submit" name="c_nombre" value="Cambiar nombre y apellidos">
+            </form>
+
+            <form>
+                <label for="usuario"> <b>Cambiar usuario:</b>
+                <input type="text" name="usuario">
+                <input type="submit" name="c_usuario" value="Cambiar usuario">
+            </form>
+
+            <form>
+                <label for="contrasena"> <b>Cambiar contraseña:</b>
+                <input type="text" name="contrasena">
+                <input type="submit" name="c_contrasena" value="Cambiar contraseña">
+            </form>
+
+            <form>
+                <label for="dni"> <b>Cambiar DNI:</b>
+                <input type="text" name="dni">
+                <input type="submit" name="c_dni" value="Cambiar DNI">
+            </form>
+
+            <form>
+                <label for="telefono"> <b>Cambiar teléfono:</b>
+                <input type="tel" name="telefono">
+                <input type="submit" name="c_telefono" value="Cambiar teléfono">
+            </form>
+
+            <form>
+                <label for="fechanato"> <b>Cambiar fecha de nacimiento:</b>
+                <input type="text" name="fechanato">
+                <input type="submit" name="c_fechanato" value="Cambiar fechanato">
+            </form>
+
+            <form>
+                <label for="email"> <b>Cambiar email:</b>
+                <input type="text" name="email">
+                <input type="submit" name="c_email" value="Cambiar email">
             </form>
         </div>
     </div>
