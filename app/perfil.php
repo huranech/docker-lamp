@@ -12,44 +12,28 @@
         <div>
         <h1>Modifica los datos que quieras de tu perfil</h1>
             <form action="procesar-perfil.php" method="post">
-                <label for="nombre"> <b>Nombre y apellidos:</b>
+                <label for="nombre"> <b>Cambiar nombre y apellidos:</b>
                 <input type="text" name="nombre" value="<?php echo($_SESSION['nombre']);?>">
-            </form>
-
-            <form action="procesar-perfil.php" method="post">
+                <br>
                 <label for="usuario"> <b>Cambiar usuario:</b>
-                <input type="text" name="usuario">
-                <input type="submit" name="c_usuario" value="Cambiar usuario">
-            </form>
-
-            <form action="procesar-perfil.php" method="post">
+                <input type="text" name="usuario" value="<?php echo($_SESSION['usuario']);?>">
+                <br>
                 <label for="contrasena"> <b>Cambiar contraseña:</b>
-                <input type="text" name="contrasena">
-                <input type="submit" name="c_contrasena" value="Cambiar contraseña">
-            </form>
-
-            <form action="procesar-perfil.php" method="post">
+                <input type="text" name="contrasena" value="<?php echo($_SESSION['constrasena']);?>">
+                <br>
                 <label for="dni"> <b>Cambiar DNI:</b>
-                <input type="text" name="dni">
-                <input type="submit" name="c_dni" value="Cambiar DNI">
-            </form>
-
-            <form action="procesar-perfil.php" method="post">
+                <input type="text" name="dni" value="<?php echo($_SESSION['DNI']);?>">
+                <br>
                 <label for="telefono"> <b>Cambiar teléfono:</b>
-                <input type="tel" name="telefono">
-                <input type="submit" name="c_telefono" value="Cambiar teléfono">
-            </form>
-
-            <form action="procesar-perfil.php" method="post">
+                <input type="tel" name="telefono" value="<?php echo($_SESSION['telefono']);?>">
+                <br>
                 <label for="fechanato"> <b>Cambiar fecha de nacimiento:</b>
-                <input type="text" name="fechanato">
-                <input type="submit" name="c_fechanato" value="Cambiar fechanato">
-            </form>
-
-            <form action="procesar-perfil.php" method="post">
+                <input type="text" name="fechanato" value="<?php echo($_SESSION['fechanato']);?>">
+                <br>
                 <label for="email"> <b>Cambiar email:</b>
-                <input type="text" name="email">
-                <input type="submit" name="c_email" value="Cambiar email">
+                <input type="text" name="email" value="<?php echo($_SESSION['email']);?>">
+                <br>
+                <input type="submit" name="submit" value="Cambiar datos">
             </form>
         </div>
     </div>
