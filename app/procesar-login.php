@@ -25,7 +25,7 @@ if(isset($_POST["submit"])) {
                 $_SESSION['nombre'] = $user_data['nombre'];
                 $_SESSION['usuario'] = $user_data['usuario'];
                 $_SESSION['contrasena'] = $user_data['contrasena'];
-                $_SESSION['dni'] = $user_data['DNI'];
+                $_SESSION['DNI'] = $user_data['DNI'];
                 $_SESSION['telefono'] = $user_data['telefono'];
                 $_SESSION['fechanato'] = $user_data['fechanato'];
                 $_SESSION['email'] = $user_data['email'];
