@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,8 @@
         <div>
         <h1>Modifica los datos que quieras de tu perfil</h1>
             <form action="procesar-perfil.php" method="post">
-                <label for="nombre"> <b>Cambiar nombre y apellido:</b>
-                <input type="text" name="nombre">
-                <input type="submit" name="c_nombre" value="Cambiar nombre y apellidos">
+                <label for="nombre"> <b>Nombre y apellidos:</b>
+                <input type="text" name="nombre" value="<?php echo($_SESSION['nombre']);?>">
             </form>
 
             <form action="procesar-perfil.php" method="post">

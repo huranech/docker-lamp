@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if(isset($_POST["submit"])) {
   
     $usuario = $_POST["usuario"];
@@ -20,6 +22,7 @@ if(isset($_POST["submit"])) {
             if($user_data['contrasena'] === $contrasena)
             {
                 $_SESSION['id_usuario'] = $user_data['id'];
+                $_SESSION['nombre'] = $user_data['nombre'];
             }
         }
     }

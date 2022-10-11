@@ -36,7 +36,7 @@
       <li><a href="modificarcatalogo.php">Modificar catálogo</a></li>
       <li><a href="login.html">Iniciar sesión</a></li>
       <li><a href="registrarse.html">Registrarse</a></li>
-      <li><a href="perfil.html">Perfil</a></li>
+      <li><a href="perfil.php">Perfil</a></li>
     </ul>
   </nav>
   <?php
@@ -52,10 +52,10 @@
       die("Database connection failed: " . $conn->connect_error);
     }
 
-    include("funciones.php");
-    include("procesar-login.php");
+
 
     echo($_SESSION['id_usuario']);
+    echo($_SESSION['nombre']);
 
 
 
