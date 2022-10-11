@@ -35,6 +35,10 @@
                 <br>
                 <input type="submit" name="submit" value="Cambiar datos">
             </form>
+
+            <form action="procesar-perfil.php" method="post">
+                <input type="submit" name="eliminar" value="Eliminar cuenta">
+            </form>
         </div>
     </div>
 </body>
