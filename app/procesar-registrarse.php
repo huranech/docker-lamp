@@ -13,7 +13,7 @@ if(isset($_POST["submit"])) {
  require_once 'index.php';
  require_once 'funciones.php';
 
- $id = random_num(20);
+ $id = random_num(11);
  $sql = "INSERT INTO usuarios(id, nombre, usuario, contrasena, DNI, telefono, fechanato, email) VALUES ('$id', '$nombre', '$usuario', '$contrasena', '$dni', '$telefono', '$fechanato', '$email');";
  mysqli_query($conn, $sql);
 
