@@ -24,8 +24,6 @@ if(isset($_POST["eliminar"])) {
     require_once 'index.php';
     require_once 'funciones.php';
    
-    $id = random_num(11);
-    $sql = "INSERT INTO plantas(id, nomcomun, nomcient, origen, descripcion, temporada) VALUES ('$id', '$nomcomun', '$nomcient', '$origen', '$descripcion', '$temporada');";
+    $sql = "DELETE FROM plantas WHERE nomcomun = '$nomcomun';";
     mysqli_query($conn, $sql);
-   
    }
