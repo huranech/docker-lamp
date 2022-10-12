@@ -1,19 +1,22 @@
+# Proyecto SGSSI - Docker LAMP
 
-# Docker LAMP
-Linux + Apache + MariaDB (MySQL) + PHP 7.2 on Docker Compose. Mod_rewrite enabled by default.
+#### Hugo Ran, Paula Pinto y Oier Diez
 
-## Instructions
+Para desplegar el proyecto mediante docker, seguir las siguientes instrucciones:
+1. Situar la carpeta docker-lamp en el directorio elegido, por ejemplo, en ==/home/user/SGSSI==
+2. En la terminal, introducir los siquientes comandos:
 
-Enter the following command to start your containers:
+- Primero, nos ==situamos la terminal dentro del directorio== donde se encuentre nuestro proyecto, en este caso:
 ```bash
-$ docker-compose up -d
+$ cd /home/user/SGSSI/docker-lamp
 ```
-
-To stop them, use this:
+- Después, construimos la ==imagen web==:
 ```bash
-$ docker-compose stop
+$ sudo docker build -t="web" ./
 ```
-
-Feel free to make pull requests and help to improve this.
-
-If you are looking for phpMyAdmin, take a look at [this](https://github.com/celsocelante/docker-lamp/issues/2).
+- Por último, se ==despliegan los servicios== mediante:
+```bash
+$ sudo docker-compose up
+```
+3. Una vez hemos completado estos pasos, visitamos la direccion ==[localhost:81](http://localhost:81)==
+Tras haber hecho esto, ya deberiamos de ser capaces de visualizar correctamente el sistema.
