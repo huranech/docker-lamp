@@ -66,6 +66,7 @@ INSERT INTO `usuarios` (`id`, `nombre`) VALUES
 INSERT INTO `plantas` (`id`, `nomcomun`, `nomcient`, `origen`, `comestible`, `temporada`) VALUES
 (1, 'Costilla de Adan', 'Monstera deliciosa', 'Sudamerica', 'Los frutos solo cuando estan maduros', 'Mediados de verano');
 (2, 'Orquidea azul', 'Aganisia cyanea', 'Sudamerica, Isla de Trinidad', NULL, NULL);
+(3, 'Arbol de angelica china', 'Aralia chinensis', 'China', 'Usada en medicamentos', NULL);
 --
 -- Índices para tablas volcadas
 --
