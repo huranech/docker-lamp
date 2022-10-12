@@ -47,7 +47,7 @@ CREATE TABLE `plantas` (
   `nomcomun` text NOT NULL,
   `nomcient` text NOT NULL,
   `origen` text NOT NULL,
-  `comestible` BOOLEAN,
+  `descripcion` text,
   `temporada` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -63,9 +63,9 @@ INSERT INTO `usuarios` (`id`, `nombre`) VALUES
 -- Volcado de datos para la tabla `plantas`
 --
 
-INSERT INTO `plantas` (`id`, `nomcomun`, `nomcient`, `origen`, `comestible`, `temporada`) VALUES
-(1, 'Costilla de Adan', 'Monstera deliciosa', 'Sudamerica', 'Los frutos solo cuando estan maduros', 'Mediados de verano');
-(2, 'Orquidea azul', 'Aganisia cyanea', 'Sudamerica, Isla de Trinidad', NULL, NULL);
+INSERT INTO `plantas` (`id`, `nomcomun`, `nomcient`, `origen`, `descripcion`, `temporada`) VALUES
+(1, 'Costilla de Adan', 'Monstera deliciosa', 'Sudamerica', 'Los frutos solo cuando estan maduros', 'Mediados de verano'),
+(2, 'Orquidea azul', 'Aganisia cyanea', 'Sudamerica, Isla de Trinidad', NULL, NULL),
 (3, 'Arbol de angelica china', 'Aralia chinensis', 'China', 'Usada en medicamentos', NULL);
 --
 -- Índices para tablas volcadas
