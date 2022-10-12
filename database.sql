@@ -36,6 +36,19 @@ CREATE TABLE `usuarios` (
   `telefono` text NOT NULL,
   `fechanato` date NOT NULL,
   `email` text NOT NULL
+) ;
+
+--
+-- Estructura de tabla para la tabla `plantas`
+--
+
+CREATE TABLE `plantas` (
+  `id` int(11) NOT NULL,
+  `nomcomun` text NOT NULL,
+  `nomcient` text NOT NULL,
+  `origen` text NOT NULL,
+  `comestible` BOOLEAN,
+  `temporada` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -47,6 +60,13 @@ INSERT INTO `usuarios` (`id`, `nombre`) VALUES
 (2, 'aitor');
 
 --
+-- Volcado de datos para la tabla `plantas`
+--
+
+INSERT INTO `plantas` (`id`, `nomcomun`, `nomcient`, `origen`, `comestible`, `temporada`) VALUES
+(1, 'Costilla de Adan', 'Monstera deliciosa', 'Sudamerica', 'Los frutos solo cuando estan maduros', 'Mediados de verano');
+(2, 'Orquidea azul', 'Aganisia cyanea', 'Sudamerica, Isla de Trinidad', NULL, NULL);
+--
 -- Índices para tablas volcadas
 --
 
@@ -54,6 +74,13 @@ INSERT INTO `usuarios` (`id`, `nombre`) VALUES
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+COMMIT;
+
+--
+-- Indices de la tabla `plantas`
+--
+ALTER TABLE `plantas`
   ADD PRIMARY KEY (`id`);
 COMMIT;
 
