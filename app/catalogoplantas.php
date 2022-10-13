@@ -24,7 +24,7 @@ if (!$conn) {
     exit;
 }
 
-$sql = "SHOW TABLES FROM $db";
+$sql = "SHOW `plantas` FROM $db";
 $resultado = mysqli_query($sql);
 
 //if (!$resultado) {
