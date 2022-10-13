@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    Este es el catálogo de plantas
+<body>
+    <div>
+        <h1>Catalogo de plantas</h1>
+    </div>
 </body>
 </html>
