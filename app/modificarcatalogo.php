@@ -18,9 +18,9 @@
 
             <input type="text" name="origen" placeholder="Origen" required>
 
-            <input type="text" name="descripcion" placeholder="Descripción" required>
+            <input type="text" name="descripcion" placeholder="Descripción">
 
-            <input type="text" name="temporada" placeholder="Temporada" required>
+            <input type="text" name="temporada" placeholder="Temporada">
 
             <input type="submit" name="anadir" value="Añadir Planta">
     </form>
@@ -36,9 +36,9 @@
 
         <input type="text" name="origen" placeholder="Origen" required>
 
-        <input type="text" name="descripcion" placeholder="Descripción" required>
+        <input type="text" name="descripcion" placeholder="Descripción">
 
-        <input type="text" name="temporada" placeholder="Temporada" required>
+        <input type="text" name="temporada" placeholder="Temporada">
 
         <input type="submit" name="modificar" value="Modificar Planta">
         </form>
