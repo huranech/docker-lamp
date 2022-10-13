@@ -12,15 +12,20 @@
         <h1>Catalogo de plantas</h1>
 
 <?php
-$nombre_bd = 'database.sql';
 
-if (!mysqli_connect('localhost', 'admin', 'test')) {
+$hostname = "db";
+$username = "admin";
+$password = "test";
+$db = "database"
+
+$conn = mysqli_connect($hostname,$username,$password,$db);
+if (!$conn) {
     echo 'No se pudo conectar a mysql';
     exit;
 }
 
-$sql = "SHOW TABLES FROM $nombre_bd";
-$resultado = mysql_query($sql);
+$sql = "SHOW TABLES FROM $db";
+$resultado = mysqli_query($sql);
 
 //if (!$resultado) {
     //echo "Error de BD, no se pudieron listar las tablas\n";
