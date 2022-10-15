@@ -17,12 +17,10 @@ if(isset($_POST["anadir"])) {
  if($resultado)
  {
     $array = mysqli_fetch_assoc($resultado);
-    $id = $array['id'] + 1;
-    print("$id");
+    $id = $array['id'] + 1; 
  }
  else{
     $id = 1;
-    print("$id");
  }
 
  $sql = "INSERT INTO plantas(id, nomcomun, nomcient, origen, descripcion, temporada) VALUES ('$id', '$nomcomun', '$nomcient', '$origen', '$descripcion', '$temporada');";
