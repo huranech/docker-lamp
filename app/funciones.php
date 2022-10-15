@@ -41,4 +41,16 @@ function validar_tel($telefono)
     }
 }
 
+function validar_fecha($fecha, $formato = 'Y-m-d'){
+    $d = DateTime::createFromFormat($formato, $fecha);
+    if ($d && $d->format($formato) === $fecha)
+    {
+        return true;
+    }
+    else
+    {
+        echo "formato de fecha incorrecto";
+        return false;
+    }
+}
 

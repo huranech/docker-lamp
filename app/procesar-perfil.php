@@ -14,7 +14,7 @@ if(isset($_POST["submit"])) {
     $fechanato = $_POST["fechanato"];
     $email = $_POST["email"];
 
-    if(validar_tel($telefono) && validar_texto($nombre))
+    if(validar_tel($telefono) && validar_texto($nombre) && validar_fecha($fechanato))
     {
         $sql = "UPDATE usuarios SET nombre = '$nombre', usuario = '$usuario', contrasena = '$contrasena', telefono = '$telefono', fechanato = '$fechanato', email = '$email' WHERE DNI = '$dni';";
         mysqli_query($conn, $sql);

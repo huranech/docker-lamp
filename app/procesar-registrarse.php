@@ -13,7 +13,7 @@ if(isset($_POST["submit"])) {
     require_once 'index.php';
     require_once 'funciones.php';
 
-    if(validar_tel($telefono) && validar_texto($nombre)){
+    if(validar_tel($telefono) && validar_texto($nombre) && validar_fecha($fechanato)){
 
         $sql = "SELECT * FROM usuarios WHERE id = (SELECT MAX(id) FROM usuarios);";
 
