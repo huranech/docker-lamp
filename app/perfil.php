@@ -19,7 +19,7 @@
                 <input type="text" name="usuario" value="<?php echo($_SESSION['usuario']);?>">
                 <br>
                 <label for="contrasena"> <b>Cambiar contraseña:</b>
-                <input type="text" name="contrasena" value="<?php echo($_SESSION['contrasena']);?>">
+                <input type="password" name="contrasena" value="<?php echo($_SESSION['contrasena']);?>">
                 <br>
                 <label for="dni"> <b>Cambiar DNI:</b>
                 <input type="text" name="dni" value="<?php echo($_SESSION['DNI']);?>">

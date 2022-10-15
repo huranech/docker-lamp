@@ -54,11 +54,6 @@
 
 
 
-    echo($_SESSION['id_usuario']);
-    echo($_SESSION['nombre']);
-
-
-
   ?>
 </body>
 </html>

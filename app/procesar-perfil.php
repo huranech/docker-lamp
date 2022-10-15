@@ -14,8 +14,12 @@ if(isset($_POST["submit"])) {
     $fechanato = $_POST["fechanato"];
     $email = $_POST["email"];
 
-    $sql = "UPDATE usuarios SET nombre = '$nombre', usuario = '$usuario', contrasena = '$contrasena', telefono = '$telefono', fechanato = '$fechanato', email = '$email' WHERE DNI = '$dni';";
-    mysqli_query($conn, $sql);
+    if(validar_tel($telefono) && validar_texto($nombre))
+    {
+        $sql = "UPDATE usuarios SET nombre = '$nombre', usuario = '$usuario', contrasena = '$contrasena', telefono = '$telefono', fechanato = '$fechanato', email = '$email' WHERE DNI = '$dni';";
+        mysqli_query($conn, $sql);
+    }
+
 }
 
 if(isset($_POST["eliminar"]))
