@@ -11,7 +11,20 @@ if(isset($_POST["anadir"])) {
  require_once 'index.php';
  require_once 'funciones.php';
 
- $id = random_num(11);
+ $sql = "SELECT * FROM plantas WHERE id = (SELECT MAX(id) FROM plantas);";
+
+ $resultado = mysqli_query($conn, $sql);
+ if($resultado)
+ {
+    $array = mysqli_fetch_assoc($resultado);
+    $id = $array['id'] + 1;
+    print("$id");
+ }
+ else{
+    $id = 1;
+    print("$id");
+ }
+
  $sql = "INSERT INTO plantas(id, nomcomun, nomcient, origen, descripcion, temporada) VALUES ('$id', '$nomcomun', '$nomcient', '$origen', '$descripcion', '$temporada');";
  mysqli_query($conn, $sql);
 

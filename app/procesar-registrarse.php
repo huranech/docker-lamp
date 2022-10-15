@@ -21,11 +21,9 @@ if(isset($_POST["submit"])) {
  {
     $array = mysqli_fetch_assoc($resultado);
     $id = $array['id'] + 1;
-    print("$id");
  }
  else{
     $id = 1;
-    print("$id");
  }
 
  $sql = "INSERT INTO usuarios(id, nombre, usuario, contrasena, DNI, telefono, fechanato, email) VALUES ('$id', '$nombre', '$usuario', '$contrasena', '$dni', '$telefono', '$fechanato', '$email');";
