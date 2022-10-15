@@ -21,7 +21,7 @@ function random_num($length)
 
 function validar_texto($nombre)
 {
-    if (preg_match ("/^[a-zA-z]*$/", $nombre) ) {  
+    if (preg_match ("/^[a-zA-Z][a-zA-Z\s]*$/", $nombre) ) {  
         return true;
     } else {
         echo "Sólo se admiten letras del alfabeto o espacios";
