@@ -18,10 +18,7 @@
             <thead>
                 <tr>
                 <th scope="col" style="color: green;">Nombre común</th>
-                <th scope="col" style="color: green;">Nombre científico</th>
                 <th scope="col" style="color: green;">Origen</th>
-                <th scope="col" style="color: green;">Descripción</th>
-                <th scope="col" style="color: green;">Temporada</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,10 +32,10 @@
 
                         <tr>
                             <th scope="row"><?php echo $row['nomcomun']; ?></th>
-                            <th scope="row"><?php echo $row['nomcient']; ?></th>
                             <th scope="row"><?php echo $row['origen']; ?></th>
-                            <th scope="row"><?php echo $row['descripcion']; ?></th>
-                            <th scope="row"><?php echo $row['temporada']; ?></th>
+                            <?php echo "<th> <div class='btn-group'>
+                                <a class='btn btn-danger' href='./borrar.php?id= ".$row['id']."'>Borrar</a>
+                            </div>"?>
                         </tr>
 
                   <?php  } ?>

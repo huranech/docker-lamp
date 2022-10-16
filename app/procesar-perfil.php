@@ -21,10 +21,3 @@ if(isset($_POST["submit"])) {
     }
 
 }
-
-if(isset($_POST["eliminar"]))
-{
-    $dni = $_SESSION['dni'];
-    $sql = "DELETE FROM usuarios WHERE DNI = '$dni';";
-    mysqli_query($conn, $sql);
-}
