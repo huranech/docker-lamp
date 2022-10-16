@@ -1,5 +1,6 @@
 <?php
 header("Location: ../index.php");
+session_start();
 if(isset($_POST["anadir"])) {
   
  $nomcomun = $_POST["nomcomun"];
@@ -30,7 +31,7 @@ if(isset($_POST["anadir"])) {
 
 if(isset($_POST["modificar"])) {
   
-    $nomcomunant = $_POST["nomcomunant"];
+    $id = $_SESSION['id_planta'];
     $nomcomun = $_POST["nomcomun"];
     $nomcient = $_POST["nomcient"];
     $origen = $_POST["origen"];
@@ -40,7 +41,7 @@ if(isset($_POST["modificar"])) {
     require_once 'index.php';
     require_once 'funciones.php';
    
-    $sql = "UPDATE plantas SET nomcomun = '$nomcomun', nomcient = '$nomcient', origen = '$origen', descripcion = '$descripcion', temporada = '$temporada' WHERE nomcomun = '$nomcomunant';";
+    $sql = "UPDATE plantas SET nomcomun = '$nomcomun', nomcient = '$nomcient', origen = '$origen', descripcion = '$descripcion', temporada = '$temporada' WHERE id = '$id';";
     mysqli_query($conn, $sql);
    
    }

@@ -34,14 +34,14 @@
         <ul class="navlist">
           <li><a href="index.php">Inicio</a></li>
           <li><a href="catalogoplantas.php">Catálogo de plantas</a></li>
-          <li><a href="modificarcatalogo.php">Modificar catálogo</a></li>
+          <li><a href="anadir-planta.php">Añadir planta</a></li>
           <li><a href="login.html">Iniciar sesión</a></li>
           <li><a href="registrarse.html">Registrarse</a></li>
           <li><a href="perfil.php">Perfil</a></li>
         </ul>
     </nav>
     <div>
-        <h1>Modifica los datos que quieras del catálogo</h1>
+        <h1>Añade una planta</h1>
         <form action="procesar-modcatalogo.php" method="post">
             <h3>Añade una planta</h3>
 
@@ -57,24 +57,6 @@
 
             <input type="submit" name="anadir" value="Añadir Planta">
     </form>
-    </div>
-    <div>
-        <h3>Modifica una planta<h3>
-        <form action="procesar-modcatalogo.php" method="post">
-        <input type="text" name="nomcomunant" placeholder="Nombre común antiguo de la planta a cambiar" required>
-
-        <input type="text" name="nomcomun" placeholder="Nombre común nuevo" required>
-
-        <input type="text" name="nomcient" placeholder="Nombre científico" required>
-
-        <input type="text" name="origen" placeholder="Origen" required>
-
-        <input type="text" name="descripcion" placeholder="Descripción">
-
-        <input type="text" name="temporada" placeholder="Temporada">
-
-        <input type="submit" name="modificar" value="Modificar Planta">
-        </form>
     </div>
 </body>
 </html>

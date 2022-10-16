@@ -32,7 +32,7 @@
         <ul class="navlist">
           <li><a href="index.php">Inicio</a></li>
           <li><a href="catalogoplantas.php">Catálogo de plantas</a></li>
-          <li><a href="modificarcatalogo.php">Modificar catálogo</a></li>
+          <li><a href="anadir-planta.php">Añadir planta</a></li>
           <li><a href="login.html">Iniciar sesión</a></li>
           <li><a href="registrarse.html">Registrarse</a></li>
           <li><a href="perfil.php">Perfil</a></li>
@@ -66,6 +66,7 @@
                             <th scope="row"><?php echo $row['nomcomun']; ?></th>
                             <th scope="row"><?php echo $row['origen']; ?></th>
                             <?php echo "<th> <div class='btn-group'>
+                                <a class='btn btn-secondary' href='./editar.php?id=".$row['id']."'>Editar</a>
                                 <a class='btn btn-danger' href='./borrar.php?id= ".$row['id']."'>Borrar</a>
                             </div>"?>
                         </tr>
