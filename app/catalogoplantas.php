@@ -67,7 +67,7 @@
                             <th scope="row"><?php echo $row['origen']; ?></th>
                             <?php echo "<th> <div class='btn-group'>
                                 <a class='btn btn-secondary' href='./editar.php?id=".$row['id']."'>Editar</a>
-                                <a class='btn btn-danger' href='./borrar.php?id= ".$row['id']."'>Borrar</a>
+                                <a onclick='confirmar()' class='btn btn-danger' href='./borrar.php?id= ".$row['id']."'>Borrar</a>
                             </div>"?>
                         </tr>
 
@@ -78,5 +78,15 @@
     </div>
 
     </div>
+    <script>
+        function confirmar()
+        {
+            var resultado = confirm('¿Estás seguro de que quieres borrar la planta?');
+            if(resultado == false)
+            {
+                event.preventDefault();
+            }
+        }
+    </script>
 </body>
 </html>
