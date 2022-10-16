@@ -21,8 +21,8 @@
                 <label for="contrasena"> <b>Cambiar contraseña:</b>
                 <input type="password" name="contrasena" value="<?php echo($_SESSION['contrasena']);?>">
                 <br>
-                <label for="dni"> <b>Cambiar DNI:</b>
-                <input type="text" name="dni" value="<?php echo($_SESSION['DNI']);?>">
+                <label for="dni"> <b>DNI (no se puede cambiar):</b>
+                <label for="dni"> <b><?php echo($_SESSION['DNI']);?></b>
                 <br>
                 <label for="telefono"> <b>Cambiar teléfono:</b>
                 <input type="tel" name="telefono" value="<?php echo($_SESSION['telefono']);?>">
