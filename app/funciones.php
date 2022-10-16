@@ -63,7 +63,7 @@ function validar_dni($dni){
     }
     else
     {
-        echo "formato de DNI incorrecto";
+        echo "formato de dni incorrecto";
         return false;
     }
     
