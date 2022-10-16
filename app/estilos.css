@@ -1,0 +1,89 @@
+html { /*para que todos los hijos esten usando la fuente */
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    /* el fondo */
+    background-image: url(whitegreen.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: #364552;
+    color: aliceblue;
+    padding: 3rem 2rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.form-registro h2 {
+    color: aliceblue;
+    margin-bottom: 20px;
+    font-size: 25px;
+
+}
+.form-registro {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 7px 13px 37px #000;
+
+}
+
+.controls {
+    color: white;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    background-color: #24303c;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #1f53c5;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.form-registro p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-registro .buttons {
+    width: 100%;
+    background: #1f53c5;
+    border: 2px solid;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+/* animacion de boton */
+.form-registro .buttons:hover {
+    color: #24303c;
+    border-color: #2691d9;
+    transition: .5s;
+    border-spacing: 5px;
+    cursor: pointer;
+    
+
+}
+.form-registro .buttons:active {
+    color: #000;
+    visibility: hidden;
+    border-color: darkmagenta;
+
+}
