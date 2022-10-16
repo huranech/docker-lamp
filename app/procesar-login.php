@@ -10,6 +10,7 @@ if(isset($_POST["submit"])) {
     require_once 'index.php';
     require_once 'funciones.php';
 
+    //buscamos el usuario en la tabla para coger sus datos
     $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' limit 1";;
 
     $resultado = mysqli_query($conn, $sql);
@@ -21,6 +22,7 @@ if(isset($_POST["submit"])) {
 
             if($user_data['contrasena'] === $contrasena)
             {
+                //guardamos los datos en la variable super global $_SESSION para poder recuperarlos en cualquier momento
                 $_SESSION['id_usuario'] = $user_data['id'];
                 $_SESSION['nombre'] = $user_data['nombre'];
                 $_SESSION['usuario'] = $user_data['usuario'];

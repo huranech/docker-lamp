@@ -12,6 +12,7 @@
     require_once('conexion.php');
     if(isset($_GET['id']))
     {
+        //Con este código recuperamos los datos de la planta para poder utilizarlos en el formulario de modificar la planta
         $id = $_GET['id'];
         $sql = "SELECT * FROM plantas WHERE id = '$id';";
 

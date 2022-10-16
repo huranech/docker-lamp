@@ -77,6 +77,7 @@
 
     </div>
     <script>
+        //Pregunta si realmente quiere borrar la planta
         function confirmar()
         {
             var resultado = confirm('¿Estás seguro de que quieres borrar la planta?');

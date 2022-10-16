@@ -12,6 +12,7 @@ if(isset($_POST["submit"])) {
     require_once 'index.php';
     require_once 'funciones.php';
 
+    //si se cumple todo lo que queremos validar, se realiza la inserción de datos en la base de datos
     if(validar_tel($telefono) && validar_texto($nombre) && validar_fecha($fechanato) && validar_dni($dni)){
 
         $sql = "SELECT * FROM usuarios WHERE id = (SELECT MAX(id) FROM usuarios);";
@@ -29,6 +30,7 @@ if(isset($_POST["submit"])) {
         $sql = "INSERT INTO usuarios(id, nombre, usuario, contrasena, DNI, telefono, fechanato, email) VALUES ('$id', '$nombre', '$usuario', '$contrasena', '$dni', '$telefono', '$fechanato', '$email');";
         mysqli_query($conn, $sql);
 
+        //guardamos los datos para la página de perfil
         $_SESSION['id_usuario'] = $id;
         $_SESSION['nombre'] = $nombre;
         $_SESSION['usuario'] = $usuario;

@@ -2,23 +2,8 @@
 
 require_once 'conexion.php';
 
-function random_num($length)
-{
-    $text = "";
-    if($length < 5)
-    {
-        $length = 5;
-    }
 
-    $len = rand(4, $length);
-    for($i=0; $i < $len; $i++)
-    {
-        $text .= rand(0, 9);
-    }
-
-    return $text;
-}
-
+//comprueba que el nombre sea válido
 function validar_texto($nombre)
 {
     if (preg_match ("/^[a-zA-Z][a-zA-Z\s]*$/", $nombre) ) {  
@@ -29,6 +14,7 @@ function validar_texto($nombre)
     }  
 }
 
+//comprueba que el número de teléfono sea válido
 function validar_tel($telefono)
 {
     if(preg_match('/^[0-9]{9}+$/', $telefono)) {
@@ -41,6 +27,7 @@ function validar_tel($telefono)
     }
 }
 
+//comprueba que la fecha de nacimiento sea válida
 function validar_fecha($fecha, $formato = 'Y-m-d'){
     $d = DateTime::createFromFormat($formato, $fecha);
     if ($d && $d->format($formato) === $fecha)
@@ -54,6 +41,7 @@ function validar_fecha($fecha, $formato = 'Y-m-d'){
     }
 }
 
+//comprueba que el DNI sea válido
 function validar_dni($dni){
     $letra = substr($dni, -1);
     $guion = substr($dni, -2, -1);

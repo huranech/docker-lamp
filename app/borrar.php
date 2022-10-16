@@ -1,5 +1,7 @@
 <?php
 header("Location: ../catalogoplantas.php");
+
+//Código que usamos para borrar plantas de forma individual gracias al botón "borrar"
 require_once('conexion.php');
 if(isset($_GET['id']))
 {

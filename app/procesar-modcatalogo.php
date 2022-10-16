@@ -12,6 +12,7 @@ if(isset($_POST["anadir"])) {
  require_once 'index.php';
  require_once 'funciones.php';
 
+ //creamos el ID para la planta que queremos añadir
  $sql = "SELECT * FROM plantas WHERE id = (SELECT MAX(id) FROM plantas);";
 
  $resultado = mysqli_query($conn, $sql);
@@ -24,11 +25,13 @@ if(isset($_POST["anadir"])) {
     $id = 1;
  }
 
+ //insertamos la planta con los nuevos datos
  $sql = "INSERT INTO plantas(id, nomcomun, nomcient, origen, descripcion, temporada) VALUES ('$id', '$nomcomun', '$nomcient', '$origen', '$descripcion', '$temporada');";
  mysqli_query($conn, $sql);
 
 }
 
+//código para permitir la modificación individual de cada planta
 if(isset($_POST["modificar"])) {
   
     $id = $_SESSION['id_planta'];
