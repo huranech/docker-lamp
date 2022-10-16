@@ -40,5 +40,3 @@ if(isset($_POST["submit"])) {
         $_SESSION['email'] = $email;
     }
 }
-
-header('Location: index.php');
