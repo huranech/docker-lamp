@@ -1,5 +1,5 @@
 <?php
-
+header("Location: ../index.php");
 if(isset($_POST["anadir"])) {
   
  $nomcomun = $_POST["nomcomun"];

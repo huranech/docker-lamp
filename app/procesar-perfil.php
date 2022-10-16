@@ -1,5 +1,5 @@
 <?php
-
+header("Location: ../index.php");
 session_start();
 
 require_once 'index.php';
