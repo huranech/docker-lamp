@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo de plantas</title>
-  <link rel="stylesheet" type="text/css" href="/Escritorio/Proyecto_lgssi/docker-lamp/app/estilos.css">
   
   <style>
     nav ul{list-style-type:none;
@@ -32,6 +31,7 @@
 <body>
   <nav id="navbar">
     <ul class="navlist">
+      <li><a href="index.php">Inicio</a></li>
       <li><a href="catalogoplantas.php">Catálogo de plantas</a></li>
       <li><a href="modificarcatalogo.php">Modificar catálogo</a></li>
       <li><a href="login.html">Iniciar sesión</a></li>
