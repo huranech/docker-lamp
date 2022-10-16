@@ -52,14 +52,6 @@ CREATE TABLE `plantas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `nombre`) VALUES
-(1, 'mikel'),
-(2, 'aitor');
-
---
 -- Volcado de datos para la tabla `plantas`
 --
 
