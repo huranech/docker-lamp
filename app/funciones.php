@@ -56,10 +56,10 @@ function validar_fecha($fecha, $formato = 'Y-m-d'){
 
 function validar_dni($dni){
     $letra = substr($dni, -1);
-    $guion = substr();
-    $numeros = substr($dni, 0, -1);
+    $guion = substr($dni, -2, -1);
+    $numeros = substr($dni, 0, -2);
   
-    if (substr("TRWAGMYFPDXBNJZSQVHLCKE", $numeros%23, 1) == $letra && strlen($letra) == 1 && strlen ($numeros) == 8 ){
+    if (substr("TRWAGMYFPDXBNJZSQVHLCKE", $numeros%23, 1) == $letra && strlen($letra) == 1 && strlen ($numeros) == 8 && $guion == "-"){
         return true;
     }
     else

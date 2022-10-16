@@ -1,4 +1,4 @@
-<?php header("Location: ../index.php");
+<?php  header("Location: ../index.php");
 if(isset($_POST["submit"])) {
   
     $nombre = $_POST["nombre"];
