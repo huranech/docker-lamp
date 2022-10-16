@@ -1,5 +1,5 @@
 <?php
-header("Location: ../index.php");
+header("Location: ../catalogoplantas.php");
 require_once('conexion.php');
 if(isset($_GET['id']))
 {
