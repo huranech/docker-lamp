@@ -19,5 +19,12 @@ if(isset($_POST["submit"])) {
         $sql = "UPDATE usuarios SET nombre = '$nombre', usuario = '$usuario', contrasena = '$contrasena', telefono = '$telefono', fechanato = '$fechanato', email = '$email' WHERE DNI = '$dni';";
         mysqli_query($conn, $sql);
     }
+}
 
+if(isset($_POST["eliminar"])) {
+    $id = $_SESSION['id_usuario'];
+    $sql = "DELETE FROM usuarios WHERE id = '$id';";
+    mysqli_query($conn, $sql);
+
+    session_unset();
 }

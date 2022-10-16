@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +37,10 @@
       <li><a href="modificarcatalogo.php">Modificar catálogo</a></li>
       <li><a href="login.html">Iniciar sesión</a></li>
       <li><a href="registrarse.html">Registrarse</a></li>
-      <li><a href="perfil.php">Perfil</a></li>
+      <?php if(isset($_SESSION['id_usuario']))
+      {
+        echo '<li><a href="perfil.php">Perfil</a></li>';
+      } ?>
     </ul>
   </nav>
   <?php

@@ -27,7 +27,7 @@
         background-color: #333333;
         color: #ffffff;} 
       </style>
-      
+
 </head>
 <body>
     <nav id="navbar">
@@ -67,6 +67,10 @@
                 <input type="text" name="email" value="<?php echo($_SESSION['email']);?>">
                 <br>
                 <input type="submit" name="submit" value="Cambiar datos">
+            </form>
+
+            <form action="procesar-perfil.php" method="post">
+                <input type="submit" name="eliminar" value="eliminar usuario">
             </form>
         </div>
     </div>

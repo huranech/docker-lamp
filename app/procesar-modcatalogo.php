@@ -44,14 +44,3 @@ if(isset($_POST["modificar"])) {
     mysqli_query($conn, $sql);
    
    }
-
-if(isset($_POST["eliminar"])) {
-  
-    $nomcomun = $_POST["nomcomun"];
-   
-    require_once 'index.php';
-    require_once 'funciones.php';
-   
-    $sql = "DELETE FROM plantas WHERE nomcomun = '$nomcomun';";
-    mysqli_query($conn, $sql);
-}

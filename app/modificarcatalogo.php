@@ -76,13 +76,5 @@
         <input type="submit" name="modificar" value="Modificar Planta">
         </form>
     </div>
-    <div>
-        <h3>Elimina una planta</h3>
-        <form action="procesar-modcatalogo.php" method="post">
-            Introduce el nombre común de la planta que quieres eliminar
-            <input type="text" name="nomcomun">
-            <input type="submit" name="eliminar" value="Eliminar Planta">
-        </form>
-    </div>
 </body>
 </html>
