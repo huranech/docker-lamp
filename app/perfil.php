@@ -1,3 +1,5 @@
+<?php
+header("X-Frame-Options: SAMEORIGIN");?>
 <?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
