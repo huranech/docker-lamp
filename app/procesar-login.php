@@ -10,16 +10,18 @@ if(isset($_POST["submit"])) {
     require_once 'index.php';
     require_once 'funciones.php';
 
-    $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' limit 1";;
+    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE usuario = ? limit 1;");
+    $stmt->bind_param('s', $usuario);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    
 
-    $resultado = mysqli_query($conn, $sql);
     if($resultado)
     {
         if($resultado && mysqli_num_rows($resultado) > 0)
         {
-            $user_data = mysqli_fetch_assoc($resultado);
+            $user_data = $resultado->fetch_assoc();
 
-            echo ($user_data['contrasena']);
             if(password_verify($contrasena, $user_data['contrasena']))
             {
                 $_SESSION['id_usuario'] = $user_data['id'];

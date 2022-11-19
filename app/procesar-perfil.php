@@ -17,8 +17,10 @@ if(isset($_POST["submit"])) {
     if(validar_tel($telefono) && validar_texto($nombre) && validar_fecha($fechanato))
     {
         $contrasenaHash = password_hash($contrasena, PASSWORD_DEFAULT);
-        $sql = "UPDATE usuarios SET nombre = '$nombre', usuario = '$usuario', contrasena = '$contrasenaHash', telefono = '$telefono', fechanato = '$fechanato', email = '$email' WHERE DNI = '$dni';";
-        mysqli_query($conn, $sql);
+
+        $stmt = $conn->prepare("UPDATE usuarios SET nombre = ?, usuario = ?, contrasena = ?, telefono = ?, fechanato = ?, email = ? WHERE DNI = ?;");
+        $stmt->bind_param('sssssss', $nombre, $usuario, $contrasena, $telefono, $fechanato, $email, $dni);
+        $stmt->execute();
 
         $_SESSION['nombre'] = $nombre;
         $_SESSION['usuario'] = $usuario;
@@ -31,8 +33,10 @@ if(isset($_POST["submit"])) {
 
 if(isset($_POST["eliminar"])) {
     $id = $_SESSION['id_usuario'];
-    $sql = "DELETE FROM usuarios WHERE id = '$id';";
-    mysqli_query($conn, $sql);
+
+    $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = ?;");
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
 
     session_unset();
 }

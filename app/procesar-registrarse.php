@@ -27,9 +27,10 @@ if(isset($_POST["submit"])) {
         }
 
         $contrasenaHash = password_hash($contrasena, PASSWORD_DEFAULT);
-    
-        $sql = "INSERT INTO usuarios(id, nombre, usuario, contrasena, DNI, telefono, fechanato, email) VALUES ('$id', '$nombre', '$usuario', '$contrasenaHash', '$dni', '$telefono', '$fechanato', '$email');";
-        mysqli_query($conn, $sql);
+
+        $stmt = $conn->prepare("INSERT INTO usuarios(id, nombre, usuario, contrasena, DNI, telefono, fechanato, email) VALUES (?,?,?,?,?,?,?,?);");
+        $stmt->bind_param('isssssss', $id, $nombre, $usuario, $contrasenaHash, $dni, $telefono, $fechanato, $email);
+        $stmt->execute();
 
         $_SESSION['id_usuario'] = $id;
         $_SESSION['nombre'] = $nombre;
