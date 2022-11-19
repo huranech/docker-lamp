@@ -31,7 +31,7 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nombre` text NOT NULL,
   `usuario` text NOT NULL,
-  `contrasena` text NOT NULL,
+  `contrasena` varchar(255) NOT NULL,
   `DNI` text NOT NULL,
   `telefono` text NOT NULL,
   `fechanato` date NOT NULL,

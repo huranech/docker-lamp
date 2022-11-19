@@ -19,12 +19,13 @@ if(isset($_POST["submit"])) {
         {
             $user_data = mysqli_fetch_assoc($resultado);
 
-            if($user_data['contrasena'] === $contrasena)
+            echo ($user_data['contrasena']);
+            if(password_verify($contrasena, $user_data['contrasena']))
             {
                 $_SESSION['id_usuario'] = $user_data['id'];
                 $_SESSION['nombre'] = $user_data['nombre'];
                 $_SESSION['usuario'] = $user_data['usuario'];
-                $_SESSION['contrasena'] = $user_data['contrasena'];
+                $_SESSION['contrasena'] = $contrasena;
                 $_SESSION['DNI'] = $user_data['DNI'];
                 $_SESSION['telefono'] = $user_data['telefono'];
                 $_SESSION['fechanato'] = $user_data['fechanato'];
