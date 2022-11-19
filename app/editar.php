@@ -18,17 +18,21 @@ header("X-Content-Type-Options: nosniff");?>
     if(isset($_GET['id']))
     {
         $id = $_GET['id'];
-        $sql = "SELECT * FROM plantas WHERE id = '$id';";
 
-        $resultado = mysqli_query($conn, $sql);
+        $stmt = $conn->prepare("SELECT * FROM plantas WHERE id = ?;");
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
         if($resultado)
         {
             if($resultado && mysqli_num_rows($resultado) > 0)
             {
-                $datos_planta = mysqli_fetch_assoc($resultado);
+                $datos_planta = $resultado->fetch_assoc();
                 $_SESSION['id_planta'] = $id;
             }
         }
+
     }
     ?>
 <h3>Modifica una planta<h3>
