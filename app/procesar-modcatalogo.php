@@ -41,7 +41,11 @@ if(isset($_POST["modificar"])) {
     require_once 'index.php';
     require_once 'funciones.php';
    
-    $sql = "UPDATE plantas SET nomcomun = '$nomcomun', nomcient = '$nomcient', origen = '$origen', descripcion = '$descripcion', temporada = '$temporada' WHERE id = '$id';";
-    mysqli_query($conn, $sql);
+    #$sql = "UPDATE plantas SET nomcomun = '$nomcomun', nomcient = '$nomcient', origen = '$origen', descripcion = '$descripcion', temporada = '$temporada' WHERE id = '$id';";
+    #mysqli_query($conn, $sql);
+
+    $stmt = $conn->prepare("UPDATE plantas SET nomcomun = ?, nomcient = ?, origen = ?, descripcion = ?, temporada = ? WHERE id = ?;");
+    $stmt->bind_param('sssssi', $nomcomun, $nomcient, $origen, $descripcion, $temporada, $id);
+    $stmt->execute();
    
    }
