@@ -1,3 +1,6 @@
+<?php
+header("X-Frame-Options: SAMEORIGIN");
+header("X-Content-Type-Options: nosniff");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +44,7 @@
           <li><a href="index.php">Inicio</a></li>
           <li><a href="catalogoplantas.php">Catálogo de plantas</a></li>
           <li><a href="anadir-planta.php">Añadir planta</a></li>
-          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="login.php">Iniciar sesión</a></li>
           <li><a href="registrarse.html">Registrarse</a></li>
           <li><a href="perfil.php">Perfil</a></li>
         </ul>
