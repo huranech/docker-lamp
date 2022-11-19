@@ -24,9 +24,9 @@ if(isset($_POST["anadir"])) {
     $id = 1;
  }
 
- $sql = "INSERT INTO plantas(id, nomcomun, nomcient, origen, descripcion, temporada) VALUES ('$id', '$nomcomun', '$nomcient', '$origen', '$descripcion', '$temporada');";
- mysqli_query($conn, $sql);
-
+$stmt = $conn->prepare("INSERT INTO plantas(id, nomcomun, nomcient, origen, descripcion, temporada) VALUES(?,?,?,?,?,?)");
+$stmt->bind_param('isssss', $id, $nomcomun, $nomcient, $origen, $descripcion, $temporada);
+$stmt->execute();
 }
 
 if(isset($_POST["modificar"])) {
