@@ -16,8 +16,16 @@ if(isset($_POST["submit"])) {
 
     if(validar_tel($telefono) && validar_texto($nombre) && validar_fecha($fechanato))
     {
-        $sql = "UPDATE usuarios SET nombre = '$nombre', usuario = '$usuario', contrasena = '$contrasena', telefono = '$telefono', fechanato = '$fechanato', email = '$email' WHERE DNI = '$dni';";
+        $contrasenaHash = password_hash($contrasena, PASSWORD_DEFAULT);
+        $sql = "UPDATE usuarios SET nombre = '$nombre', usuario = '$usuario', contrasena = '$contrasenaHash', telefono = '$telefono', fechanato = '$fechanato', email = '$email' WHERE DNI = '$dni';";
         mysqli_query($conn, $sql);
+
+        $_SESSION['nombre'] = $nombre;
+        $_SESSION['usuario'] = $usuario;
+        $_SESSION['contrasena'] = $contrasena;
+        $_SESSION['telefono'] = $telefono;
+        $_SESSION['fechanato'] = $fechanato;
+        $_SESSION['email'] = $email;
     }
 }
 
