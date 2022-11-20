@@ -6,7 +6,7 @@ require_once 'index.php';
 require_once 'funciones.php';
 require "./csrf.php";
 
-if(CSRF::validate($_POST['token']) && isset($_POST["submit"])) {
+if(CSRF::validate($_POST['token'])) {
     $nombre = $_POST["nombre"];
     $usuario = $_POST["usuario"];
     $contrasena = $_POST["contrasena"];
@@ -34,7 +34,7 @@ if(CSRF::validate($_POST['token']) && isset($_POST["submit"])) {
         exit("Fallo en la validacion del token CSRF");
     }
 }
-if(CSRF::validate($_POST['token']) && isset($_POST["eliminar"])) {
+if(isset($_POST["eliminar"])) {
     $id = $_SESSION['id_usuario'];
 
     $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = ?;");
