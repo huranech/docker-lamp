@@ -50,20 +50,6 @@ csrf();
       {
         echo '<li><a href="perfil.php">Perfil</a></li>';
       } 
-      if(!$_SESSION['token']){
-        header("Location:index.html");
-        exit();
-
-      }
-      else{
-        if (hash_equals($_SESSION['token'], $_POST['token'])){
-          //continua 
-        }else{
-          //salida del sitema
-          echo "ERROR DE TOKEN";
-          exit();
-        }
-      }
       ?>
     </ul>
   </nav>
