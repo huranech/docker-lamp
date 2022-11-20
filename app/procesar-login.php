@@ -1,7 +1,7 @@
 <?php
 session_start();
 header("Location: ../index.php");
-require "./csrf.php";
+require "csrf.php";
 if(CSRF::validate($_POST['token'])){
     $usuario = $_POST["usuario"];
     $contrasena = $_POST["contrasena"];
