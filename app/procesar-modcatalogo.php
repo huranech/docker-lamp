@@ -1,7 +1,9 @@
 <?php
 header("Location: ../index.php");
 session_start();
-if(!empty($_POST['token'])){
+require "csrf.php";
+
+if(CSRF::validate($_POST['token']) && !isset($_POST['submit'])){
          $nomcomun = $_POST["nomcomun"];
          $nomcient = $_POST["nomcient"];
          $origen = $_POST["origen"];

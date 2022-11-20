@@ -1,7 +1,7 @@
 <?php session_start();
 header("X-Frame-Options: SAMEORIGIN");
 header("X-Content-Type-Options: nosniff");
-
+require "./csrf.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
