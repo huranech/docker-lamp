@@ -2,7 +2,8 @@
 header("X-Frame-Options: SAMEORIGIN");
 header("X-Content-Type-Options: nosniff");
 session_start();
-$_SESSION["token"] = bin2hex(random_bytes(32));
+require "./csrf.php"
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
