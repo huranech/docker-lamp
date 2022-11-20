@@ -54,7 +54,7 @@ $_SESSION["token"] = bin2hex(random_bytes(32));
     </nav>
     <div>
         <form action="procesar-login.php" method="post">
-          <input name="token" type="hidden" value="<?php $_SESSION["token"]?>"/>
+          <input name="token" type="hidden" value="<?=$_SESSION["token"]?>"/>
             <section class="form-registro">
                 
                 <h2>Inicia Sesión</h2>

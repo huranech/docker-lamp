@@ -1,8 +1,7 @@
 <?php
 header("X-Frame-Options: SAMEORIGIN");
-header("X-Content-Type-Options: nosniff");?>
-<?php session_start();
-
+header("X-Content-Type-Options: nosniff");
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +52,6 @@ header("X-Content-Type-Options: nosniff");?>
         <div>
         <h1>Modifica los datos que quieras de tu perfil</h1>
             <form action="procesar-perfil.php" method="post">
-            <input name="token" type="hidden" value="<?php echo $_SESSION['token']; ?>">
                 <label for="nombre"> <b>Cambiar nombre y apellidos:</b>
                 <input type="text" name="nombre" value="<?php echo($_SESSION['nombre']);?>">
                 <br>
