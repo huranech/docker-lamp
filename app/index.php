@@ -1,6 +1,8 @@
 <?php session_start();
 header("X-Frame-Options: SAMEORIGIN");
 header("X-Content-Type-Options: nosniff");
+include_once "csrf.php";
+csrf();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +49,22 @@ header("X-Content-Type-Options: nosniff");
       <?php if(isset($_SESSION['id_usuario']))
       {
         echo '<li><a href="perfil.php">Perfil</a></li>';
-      } ?>
+      } 
+      if(!$_SESSION['token']){
+        header("Location:index.html");
+        exit();
+
+      }
+      else{
+        if (hash_equals($_SESSION['token'], $_POST['token'])){
+          //continua 
+        }else{
+          //salida del sitema
+          echo "ERROR DE TOKEN";
+          exit();
+        }
+      }
+      ?>
     </ul>
   </nav>
   <?php

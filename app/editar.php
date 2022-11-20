@@ -1,6 +1,9 @@
 <?php session_start();
 header("X-Frame-Options: SAMEORIGIN");
-header("X-Content-Type-Options: nosniff");?>
+header("X-Content-Type-Options: nosniff");
+include_once "csrf.php";
+csrf();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +41,7 @@ header("X-Content-Type-Options: nosniff");?>
 <h3>Modifica una planta<h3>
     
         <form action="procesar-modcatalogo.php" method="post">
+        <input name="csrf" type="hidden" value="<?php echo $_SESSION['csrf']; ?>">
 
         <input type="text" name="nomcomun" value= "<?php echo $datos_planta['nomcomun']; ?>" required>
 

@@ -49,6 +49,7 @@ header("X-Content-Type-Options: nosniff");?>
     <div>
         <h1>Añade una planta</h1>
         <form action="procesar-modcatalogo.php" method="post">
+            <input name="csrf" type="hidden" value="<?php echo $_SESSION['csrf']; ?>">
             <h3>Añade una planta</h3>
 
             <input type="text" name="nomcomun" placeholder="Nombre común" required>
