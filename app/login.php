@@ -51,6 +51,7 @@ header("X-Content-Type-Options: nosniff");?>
     </nav>
     <div>
         <form action="procesar-login.php" method="post">
+          <input name="csrf" type="hidden" value="<?php echo $_SESSION['csrf']; ?>">
             <section class="form-registro">
                 
                 <h2>Inicia Sesión</h2>
