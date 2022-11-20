@@ -1,6 +1,7 @@
 <?php session_start();
 header("X-Frame-Options: SAMEORIGIN");
-header("X-Content-Type-Options: nosniff");?>
+header("X-Content-Type-Options: nosniff");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
