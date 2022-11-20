@@ -3,7 +3,7 @@ header("Location: ../index.php");
 session_start();
 require "csrf.php";
 
-if(CSRF::validate($_POST['token']) && !isset($_POST['submit'])){
+if(CSRF::validate($_POST['token']) && isset($_POST['submit'])){
          $nomcomun = $_POST["nomcomun"];
          $nomcient = $_POST["nomcient"];
          $origen = $_POST["origen"];
