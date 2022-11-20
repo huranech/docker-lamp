@@ -2,7 +2,7 @@
 header("X-Frame-Options: SAMEORIGIN");
 header("X-Content-Type-Options: nosniff");
 include_once "csrf.php";
-csrf();
+$token = csrf();
 ?>
 <!DOCTYPE html>
 <html lang="en">

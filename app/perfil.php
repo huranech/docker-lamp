@@ -4,7 +4,7 @@ header("X-Content-Type-Options: nosniff");?>
 <?php session_start();
 
 include_once "csrf.php";
-csrf();
+$token = csrf();
 
 ?>
 <!DOCTYPE html>
