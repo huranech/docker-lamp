@@ -1,7 +1,5 @@
 <?php header("Location: ../index.php");
 if(isset($_POST["submit"])) {
-    if(!empty($_POST['token'])){
-        if(hash_equals($_SESSION['token'],$_POST['token'])){
             $nombre = $_POST["nombre"];
             $usuario = $_POST["usuario"];
             $contrasena = $_POST["contrasena"];
@@ -42,8 +40,4 @@ if(isset($_POST["submit"])) {
                 $_SESSION['fechanato'] = $fechanato;
                 $_SESSION['email'] = $email;
             }
-        }else{
-            //guardar acceso de posilbe peticion malintencionada
-        }
-    }
 }

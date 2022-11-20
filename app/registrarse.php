@@ -53,7 +53,6 @@ header("X-Content-Type-Options: nosniff");
       </nav>
     <div>
         <form action="procesar-registrarse.php" method="post">
-        <input name="token" type="hidden" value="<?php echo $_SESSION['token']; ?>">
             <section class="form-registro">
             <h2>Regístrate</h2>
             <input class="controls" type="text" name="nombre" placeholder="Nombre y Apellidos" required>

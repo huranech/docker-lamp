@@ -1,6 +1,7 @@
 <?php
-header("Location: ../index.php");
 session_start();
+header("Location: ../index.php");
+include_once 'csrf.php';
 $token = csrf();
 
 if(isset($_POST["submit"])) {
@@ -37,10 +38,6 @@ if(isset($_POST["submit"])) {
                     }
                 }
             }
-        }
-
-        else{
-        // guardar acceso en un log
-        }  
+        } 
     } 
 }
