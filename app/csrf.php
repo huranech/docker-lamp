@@ -14,8 +14,8 @@ $max_time = 60*60*24;
 if(isset($_SESSION['csrf_token_time'])){
     $token_time = $_SESSION['csrf_token_time'];
     if(($token_time + $max_time) >= time()){
-        unset($_SESSION)['csrf_token'];
-        unset($_SESSION)['csrf_token_time'];
+        unset($_SESSION['csrf_token']);
+        unset($_SESSION['csrf_token_time']);
     }
 }
     
