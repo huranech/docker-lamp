@@ -2,6 +2,7 @@
 header("X-Frame-Options: SAMEORIGIN");
 header("X-Content-Type-Options: nosniff");
 session_start();
+require "./csrf.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
