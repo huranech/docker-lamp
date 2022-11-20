@@ -2,6 +2,8 @@
 include_once 'csrf.php';
 header("X-Frame-Options: SAMEORIGIN");
 header("X-Content-Type-Options: nosniff");
+session_start();
+$_SESSION["token"] = bin2hex(random_bytes(32));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +55,7 @@ header("X-Content-Type-Options: nosniff");
     </nav>
     <div>
         <form action="procesar-login.php" method="post">
-          <input name="csrf" type="hidden" value="<?php echo $_SESSION['csrf']; ?>">
+          <input name="token" type="hidden" value="<?php $_SESSION["token"]?>"/>
             <section class="form-registro">
                 
                 <h2>Inicia Sesión</h2>
