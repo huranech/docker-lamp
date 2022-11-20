@@ -82,7 +82,7 @@ csrf();
             </form>
 
             <form action="procesar-perfil.php" method="post">
-                <input name="csrf" type="hidden" value="<?php echo $_SESSION['csrf']; ?>">
+                <input name="token" type="hidden" value="<?php echo $_SESSION['token']; ?>">
                 <input type="submit" name="eliminar" value="eliminar usuario">
             </form>
         </div>
