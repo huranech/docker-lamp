@@ -3,9 +3,6 @@ header("X-Frame-Options: SAMEORIGIN");
 header("X-Content-Type-Options: nosniff");?>
 <?php session_start();
 
-include_once "csrf.php";
-$token = csrf();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
