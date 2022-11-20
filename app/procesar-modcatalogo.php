@@ -2,8 +2,6 @@
 header("Location: ../index.php");
 session_start();
 if(!empty($_POST['token'])){
-   if(hash_equals($_SESSION['token'],$_POST['token'])){
-      if(isset($_POST["anadir"])) {
          $nomcomun = $_POST["nomcomun"];
          $nomcient = $_POST["nomcient"];
          $origen = $_POST["origen"];
@@ -46,5 +44,4 @@ if(!empty($_POST['token'])){
             $stmt->bind_param('sssssi', $nomcomun, $nomcient, $origen, $descripcion, $temporada, $id);
             $stmt->execute();
          }
-      }
-}
+      
